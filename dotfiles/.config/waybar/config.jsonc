@@ -9,6 +9,7 @@
   
     "modules-left": [
         "hyprland/workspaces",
+        "custom/media"
         
     ],
     "modules-center": [
@@ -105,6 +106,14 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/pacman":{
+        "format": " {}",
+        "interval": "once",
+        "exec": "checkupdates | wc -l",
+        "on-click": "update-system",
+        "signal": 8,
+        "tooltip-format": "{} updates available"
     },
     "custom/power": {
         "format" : "⏻ ",
