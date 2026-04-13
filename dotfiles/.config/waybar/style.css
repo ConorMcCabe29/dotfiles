@@ -134,6 +134,16 @@ button:hover {
     background-color: #9b59b6;
 }
 
+#custom-pacman {
+    background-color: #9b59b6;
+    color: #FFFFFF;
+    border-radius: 15px;
+    min-width: 35px;
+    border-radius: 15px;
+    border: 1px solid #FFFFFF;
+    
+}
+
 #battery {
     background-color: #ffffff;
     color: #000000;
