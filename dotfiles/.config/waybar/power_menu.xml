@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
-  <menu id="menu">
-    <section>
-      <item>
-        <attribute name="label">Shutdown</attribute>
-        <attribute name="action">custom.shutdown</attribute>
-      </item>
-      <item>
-        <attribute name="label">Reboot</attribute>
-        <attribute name="action">custom.reboot</attribute>
-      </item>
-      <item>
-        <attribute name="label">Suspend</attribute>
-        <attribute name="action">custom.suspend</attribute>
-      </item>
-      <item>
-        <attribute name="label">Hibernate</attribute>
-        <attribute name="action">custom.hibernate</attribute>
-      </item>
-    </section>
-  </menu>
+  <object class="GtkMenu" id="menu">
+		<child>
+			<object class="GtkMenuItem" id="suspend">
+				<property name="label">Suspend</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="hibernate">
+				<property name="label">Hibernate</property>
+			</object>
+		</child>
+    <child>
+			<object class="GtkMenuItem" id="shutdown">
+				<property name="label">Shutdown</property>
+			</object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1" />
+    </child>
+    <child>
+			<object class="GtkMenuItem" id="reboot">
+				<property name="label">Reboot</property>
+			</object>
+    </child>
+  </object>
 </interface>
